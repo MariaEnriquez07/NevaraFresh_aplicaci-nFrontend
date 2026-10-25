@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nevarapp/colores.dart';
 
-/// Secondary action button of the app (Crear cuenta).
+/// Secondary action button of the app (Crear cuenta, Seguir comprando).
 class BotonSecundario extends StatelessWidget {
   final String label;
 
@@ -16,8 +15,8 @@ class BotonSecundario extends StatelessWidget {
             height: 52,
             child: OutlinedButton(
               style: OutlinedButton.styleFrom(
-                foregroundColor: rosewood,
-                side: BorderSide(color: rosewood),
+                foregroundColor: const Color(0xFFB46A72),
+                side: const BorderSide(color: Color(0xFFB46A72)),
               ),
               onPressed: () {
                 print(label);

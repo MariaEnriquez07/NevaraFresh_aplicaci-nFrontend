@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nevarapp/colores.dart';
 import 'package:nevarapp/screens/carrito_screen.dart';
+import 'package:nevarapp/screens/catalogo_estados.dart';
 import 'package:nevarapp/screens/catalogo_screen.dart';
+import 'package:nevarapp/screens/confirmado_screen.dart';
 import 'package:nevarapp/screens/detalle_screen.dart';
 import 'package:nevarapp/screens/entrar_screen.dart';
+import 'package:nevarapp/screens/pedidos_estados.dart';
+import 'package:nevarapp/screens/pedidos_screen.dart';
 
 void main() {
   runApp(const App());
@@ -18,16 +21,26 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'NevaraFresh',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: rosewood),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFB46A72)),
       ),
-      // Cambia esta ruta para ver cada pantalla: /entrar, /catalogo,
-      // /detalle o /carrito.
+      // Cambia esta ruta para ver cada pantalla:
+      // /entrar, /catalogo, /detalle, /carrito, /confirmado, /pedidos
+      // Estados: /catalogo-cargando, /catalogo-vacio, /catalogo-error,
+      //          /pedidos-cargando, /pedidos-vacio, /pedidos-error
       initialRoute: '/entrar',
       routes: {
         '/entrar': (context) => const EntrarScreen(),
         '/catalogo': (context) => const CatalogoScreen(),
         '/detalle': (context) => const DetalleScreen(),
         '/carrito': (context) => const CarritoScreen(),
+        '/confirmado': (context) => const ConfirmadoScreen(),
+        '/pedidos': (context) => const PedidosScreen(),
+        '/catalogo-cargando': (context) => const CatalogoCargandoScreen(),
+        '/catalogo-vacio': (context) => const CatalogoVacioScreen(),
+        '/catalogo-error': (context) => const CatalogoErrorScreen(),
+        '/pedidos-cargando': (context) => const PedidosCargandoScreen(),
+        '/pedidos-vacio': (context) => const PedidosVacioScreen(),
+        '/pedidos-error': (context) => const PedidosErrorScreen(),
       },
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nevarapp/colores.dart';
 
 /// Main action button of the app (Entrar, Agregar, Confirmar).
 class BotonPrincipal extends StatelessWidget {
@@ -16,7 +15,7 @@ class BotonPrincipal extends StatelessWidget {
             height: 52,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: rosewood,
+                backgroundColor: const Color(0xFFB46A72),
                 foregroundColor: Colors.white,
               ),
               onPressed: () {

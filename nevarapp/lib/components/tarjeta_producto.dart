@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nevarapp/colores.dart';
 
-/// One product of the catalog list, with a button to add it.
+/// One product of a list, with a button to add it.
 class TarjetaProducto extends StatelessWidget {
   final String emoji;
   final String nombre;
@@ -20,16 +19,16 @@ class TarjetaProducto extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border.all(color: petalo, width: 2),
-        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFF7C8D3), width: 2),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: salvia,
-              borderRadius: BorderRadius.circular(12),
+              color: const Color(0xFFA8B58A),
+              borderRadius: BorderRadius.circular(16),
             ),
             child: Text(emoji, style: const TextStyle(fontSize: 32)),
           ),
@@ -43,7 +42,7 @@ class TarjetaProducto extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: medianoche,
+                    color: Color(0xFF2D3A47),
                   ),
                 ),
                 Text(precio, style: const TextStyle(color: Colors.grey)),
@@ -55,7 +54,7 @@ class TarjetaProducto extends StatelessWidget {
               print(nombre);
             },
             icon: const Icon(Icons.add),
-            color: rosewood,
+            color: const Color(0xFFB46A72),
             iconSize: 32,
           ),
         ],

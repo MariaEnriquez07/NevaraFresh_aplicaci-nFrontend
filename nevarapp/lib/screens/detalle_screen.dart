@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nevarapp/colores.dart';
 import 'package:nevarapp/components/boton_principal.dart';
+import 'package:nevarapp/components/pildora_info.dart';
 
 /// Detail of one product: photo, name, presentation, price and quantity.
 class DetalleScreen extends StatelessWidget {
@@ -9,82 +9,120 @@ class DetalleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: fondo,
+      backgroundColor: const Color(0xFFFFF7E6),
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            print('Volver');
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
         title: const Text('Detalle'),
-        backgroundColor: fondo,
-        foregroundColor: medianoche,
+        backgroundColor: const Color(0xFFFFF7E6),
+        foregroundColor: const Color(0xFF2D3A47),
       ),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                height: 200,
+                height: 240,
                 decoration: BoxDecoration(
-                  color: salvia,
-                  borderRadius: BorderRadius.circular(24),
+                  color: const Color(0xFFA8B58A),
+                  borderRadius: BorderRadius.circular(32),
                 ),
                 child: const Center(
-                  child: Text('🍎', style: TextStyle(fontSize: 96)),
+                  child: Text('🍎', style: TextStyle(fontSize: 120)),
                 ),
+              ),
+              const SizedBox(height: 20),
+              const Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Manzana roja',
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF2D3A47),
+                          ),
+                        ),
+                        Text(
+                          'Bolsa de 1 kg',
+                          style: TextStyle(color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Text(
+                    '\$6.500',
+                    style: TextStyle(
+                      fontSize: 26,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFFB46A72),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              const Row(
+                children: [
+                  PildoraInfo(texto: '🌿 Fresca'),
+                  SizedBox(width: 8),
+                  PildoraInfo(texto: '🚚 Domicilio'),
+                ],
               ),
               const SizedBox(height: 16),
               const Text(
-                'Manzana roja',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: medianoche,
-                ),
+                'Manzana roja fresca, lista para comer o para tus ensaladas.',
+                style: TextStyle(color: Color(0xFF2D3A47)),
               ),
-              const Text('Bolsa de 1 kg', style: TextStyle(color: Colors.grey)),
-              const SizedBox(height: 8),
-              const Text(
-                '\$6.500',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: rosewood,
-                ),
-              ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 24),
               Container(
                 decoration: BoxDecoration(
-                  color: petalo,
+                  color: const Color(0xFFF7C8D3),
                   borderRadius: BorderRadius.circular(24),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
+                    TextButton(
                       onPressed: () {
                         print('Restar');
                       },
-                      icon: const Icon(Icons.remove),
+                      child: const Text(
+                        '−',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF2D3A47),
+                        ),
+                      ),
                     ),
                     const Text(
                       '1',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF2D3A47),
+                      ),
                     ),
-                    IconButton(
+                    TextButton(
                       onPressed: () {
                         print('Sumar');
                       },
-                      icon: const Icon(Icons.add),
+                      child: const Text(
+                        '+',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF2D3A47),
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ),
-              const Spacer(),
+              const SizedBox(height: 24),
               const BotonPrincipal(label: 'Agregar al carrito'),
             ],
           ),
