@@ -41,7 +41,7 @@ class TarjetaDireccion extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              print('Cambiar dirección');
+              debugPrint('Cambiar dirección');
             },
             child: const Text('Cambiar'),
           ),

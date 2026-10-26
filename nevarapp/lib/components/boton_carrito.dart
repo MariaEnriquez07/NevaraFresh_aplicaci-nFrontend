@@ -14,7 +14,7 @@ class BotonCarrito extends StatelessWidget {
         foregroundColor: Colors.white,
       ),
       onPressed: () {
-        print(label);
+        debugPrint(label);
       },
       child: Text(label),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nevarapp/components/barra_superior.dart';
 import 'package:nevarapp/components/boton_principal.dart';
 import 'package:nevarapp/components/pildora_info.dart';
 
@@ -10,11 +11,7 @@ class DetalleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Detalle'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
+      appBar: const BarraSuperior(titulo: 'Detalle'),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
@@ -87,7 +84,7 @@ class DetalleScreen extends StatelessWidget {
                   children: [
                     TextButton(
                       onPressed: () {
-                        print('Restar');
+                        debugPrint('Restar');
                       },
                       child: const Text(
                         '−',
@@ -108,7 +105,7 @@ class DetalleScreen extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {
-                        print('Sumar');
+                        debugPrint('Sumar');
                       },
                       child: const Text(
                         '+',

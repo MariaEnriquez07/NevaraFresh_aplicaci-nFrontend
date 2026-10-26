@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nevarapp/components/boton_principal.dart';
 import 'package:nevarapp/components/boton_secundario.dart';
+import 'package:nevarapp/components/campo_texto.dart';
 
 /// Login screen: email and password.
 class EntrarScreen extends StatelessWidget {
@@ -56,21 +57,15 @@ class EntrarScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 24),
-              const TextField(
-                decoration: InputDecoration(
-                  labelText: 'Correo',
-                  prefixIcon: Icon(Icons.mail),
-                  border: OutlineInputBorder(),
-                ),
+              const CampoTexto(
+                etiqueta: 'Correo',
+                icono: Icons.mail,
               ),
               const SizedBox(height: 16),
-              const TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Contraseña',
-                  prefixIcon: Icon(Icons.lock),
-                  border: OutlineInputBorder(),
-                ),
+              const CampoTexto(
+                etiqueta: 'Contraseña',
+                icono: Icons.lock,
+                oculto: true,
               ),
               const SizedBox(height: 24),
               const BotonPrincipal(label: 'Entrar'),
