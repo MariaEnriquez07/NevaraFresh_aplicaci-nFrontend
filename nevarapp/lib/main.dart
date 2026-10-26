@@ -5,6 +5,7 @@ import 'package:nevarapp/screens/catalogo_screen.dart';
 import 'package:nevarapp/screens/confirmado_screen.dart';
 import 'package:nevarapp/screens/detalle_screen.dart';
 import 'package:nevarapp/screens/entrar_screen.dart';
+import 'package:nevarapp/screens/galeria_screen.dart';
 import 'package:nevarapp/screens/pedidos_estados.dart';
 import 'package:nevarapp/screens/pedidos_screen.dart';
 
@@ -24,11 +25,12 @@ class App extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFB46A72)),
       ),
       // Cambia esta ruta para ver cada pantalla:
-      // /entrar, /catalogo, /detalle, /carrito, /confirmado, /pedidos
+      // /galeria, /entrar, /catalogo, /detalle, /carrito, /confirmado, /pedidos
       // Estados: /catalogo-cargando, /catalogo-vacio, /catalogo-error,
       //          /pedidos-cargando, /pedidos-vacio, /pedidos-error
       initialRoute: '/entrar',
       routes: {
+        '/galeria': (context) => const GaleriaScreen(),
         '/entrar': (context) => const EntrarScreen(),
         '/catalogo': (context) => const CatalogoScreen(),
         '/detalle': (context) => const DetalleScreen(),

@@ -27,7 +27,7 @@ class EncabezadoSeccion extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            print(actionLabel);
+            debugPrint(actionLabel);
           },
           child: Text(actionLabel),
         ),

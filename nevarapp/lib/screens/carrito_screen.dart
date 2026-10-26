@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nevarapp/components/barra_superior.dart';
 import 'package:nevarapp/components/boton_principal.dart';
 import 'package:nevarapp/components/item_carrito.dart';
 import 'package:nevarapp/components/resumen_total.dart';
@@ -10,14 +11,10 @@ class CarritoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Mi carrito'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      appBar: BarraSuperior(titulo: 'Mi carrito'),
+      body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(

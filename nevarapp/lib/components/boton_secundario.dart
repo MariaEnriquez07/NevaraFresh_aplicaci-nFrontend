@@ -19,7 +19,7 @@ class BotonSecundario extends StatelessWidget {
                 side: const BorderSide(color: Color(0xFFB46A72)),
               ),
               onPressed: () {
-                print(label);
+                debugPrint(label);
               },
               child: Text(label),
             ),

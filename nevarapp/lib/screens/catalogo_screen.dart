@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nevarapp/components/banner_destacado.dart';
+import 'package:nevarapp/components/barra_navegacion.dart';
 import 'package:nevarapp/components/boton_carrito.dart';
+import 'package:nevarapp/components/campo_texto.dart';
 import 'package:nevarapp/components/encabezado_seccion.dart';
 import 'package:nevarapp/components/ficha_categoria.dart';
 import 'package:nevarapp/components/tarjeta_producto.dart';
@@ -12,9 +14,9 @@ class CatalogoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(16),
           child: Column(
@@ -53,12 +55,9 @@ class CatalogoScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 16),
-              TextField(
-                decoration: InputDecoration(
-                  hintText: 'Buscar frescos',
-                  prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(),
-                ),
+              CampoTexto(
+                etiqueta: 'Buscar frescos',
+                icono: Icons.search,
               ),
               SizedBox(height: 16),
               BannerDestacado(
@@ -143,14 +142,7 @@ class CatalogoScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Pedidos'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-        ],
-      ),
+      bottomNavigationBar: BarraNavegacion(indiceActivo: 0),
     );
   }
 }

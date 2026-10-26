@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nevarapp/components/barra_superior.dart';
 import 'package:nevarapp/components/estado_cargando.dart';
 import 'package:nevarapp/components/estado_error.dart';
 import 'package:nevarapp/components/estado_vacio.dart';
@@ -9,14 +10,10 @@ class PedidosCargandoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Mis pedidos'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      appBar: BarraSuperior(titulo: 'Mis pedidos'),
+      body: SafeArea(
         child: Padding(padding: EdgeInsets.all(16), child: EstadoCargando()),
       ),
     );
@@ -29,14 +26,10 @@ class PedidosVacioScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Mis pedidos'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      appBar: BarraSuperior(titulo: 'Mis pedidos'),
+      body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: EstadoVacio(
@@ -55,14 +48,10 @@ class PedidosErrorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Mis pedidos'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      appBar: BarraSuperior(titulo: 'Mis pedidos'),
+      body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: EstadoError(mensaje: 'Sin conexión'),

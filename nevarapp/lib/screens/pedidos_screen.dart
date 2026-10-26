@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nevarapp/components/barra_navegacion.dart';
+import 'package:nevarapp/components/barra_superior.dart';
 import 'package:nevarapp/components/pasos_pedido.dart';
 import 'package:nevarapp/components/tarjeta_pedido.dart';
 
@@ -8,14 +10,10 @@ class PedidosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFFF7E6),
-      appBar: AppBar(
-        title: const Text('Mis pedidos'),
-        backgroundColor: const Color(0xFFFFF7E6),
-        foregroundColor: const Color(0xFF2D3A47),
-      ),
-      body: const SafeArea(
+    return const Scaffold(
+      backgroundColor: Color(0xFFFFF7E6),
+      appBar: BarraSuperior(titulo: 'Mis pedidos'),
+      body: SafeArea(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(16),
           child: Column(
@@ -58,14 +56,7 @@ class PedidosScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 1,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu), label: 'Pedidos'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
-        ],
-      ),
+      bottomNavigationBar: BarraNavegacion(indiceActivo: 1),
     );
   }
 }

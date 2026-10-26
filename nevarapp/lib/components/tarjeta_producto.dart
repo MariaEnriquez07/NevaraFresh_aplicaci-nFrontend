@@ -51,7 +51,7 @@ class TarjetaProducto extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              print(nombre);
+              debugPrint(nombre);
             },
             icon: const Icon(Icons.add),
             color: const Color(0xFFB46A72),
